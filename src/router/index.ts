@@ -3,7 +3,7 @@ import VueRouter, { RouteConfig } from 'vue-router'
 import Home from '../views/Home.vue'
 
 Vue.use(VueRouter)
-
+/* eslint-disable */
 const routes: Array<RouteConfig> = [
   {
     path: '/',
@@ -19,11 +19,11 @@ const routes: Array<RouteConfig> = [
     component: () => import(/* webpackChunkName: "about" */ '../views/About.vue')
   }
 ]
+/* eslint-enable */
 
 const router = new VueRouter({
   mode: 'history',
   base: process.env.BASE_URL,
   routes
 })
-
 export default router
