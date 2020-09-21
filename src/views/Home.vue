@@ -8,6 +8,7 @@
 <script lang="ts">
 import { Component, Vue } from 'vue-property-decorator';
 import HelloWorld from '@/components/HelloWorld.vue'; // @ is an alias to /src
+import service from '../service/index';
 
 @Component({
   components: {
@@ -27,6 +28,11 @@ export default class Home extends Vue {
     }
   }
 }
+service.getWether().then((data: object) => {
+  if (data) {
+    // console.log(data, 'data')
+  }
+})
 interface ITestInterface {
   a: string;
   b: string;
